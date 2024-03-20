@@ -1,0 +1,51 @@
+@use "variables" as v;
+
+@mixin horizontal-line {
+    border-top: 5px solid v.$secondarycolor;
+    width: 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    padding: 0%;
+}
+
+@mixin flex ($direction, $position, $negativespace) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $position;
+    align-items: center;
+    gap: $negativespace;
+}
+
+@mixin personal-image ($url){
+    width: 250px;
+    height: 250px;
+    background-image: ($url);
+    border-radius: 50%;
+    box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.3);
+    background-size: cover;
+    background-position: center;
+}
+
+@mixin gray-area {
+    height: 130px;
+    width: 300px;
+    background-color: #d4d4d4;
+    border-radius: 5px;
+}
+
+@mixin footer {
+    color: v.$secondarycolor;
+    background-color: v.$primarycolor;
+    font-size: 1.4rem;
+}
+
+@mixin desktop {
+    @media screen and (min-width: v.$desktop) {
+      @content;
+    }
+  }
+
+

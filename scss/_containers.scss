@@ -1,0 +1,308 @@
+@use "mixins";
+@use "variables" as v;
+
+.container--background-image {
+  height: 100vh;
+  background-image: url("../assets/hero.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.container--navigation-menu__closed {
+  width: 100%;
+  height: 6%;
+  background-color: rgb(255, 255, 255, 0.1);
+  @include mixins.flex(row, right, 0px);
+  .container--menubars {
+    width: 50px;
+    margin: 5px;
+    @include mixins.flex(column, center, 5px);
+    @include mixins.desktop {
+      display: none;
+    }
+  }
+}
+
+.container--navigation-menu__open {
+  width: 100%;
+  height: 11%;
+  background-color: rgb(255, 255, 255, 0.1);
+  @include mixins.flex(column, center, 0px);
+  ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    color: v.$secondarycolor;
+    font-size: 1.5rem;
+    a {
+      all: unset;
+    }
+  }
+  @include mixins.desktop {
+    display: none;
+  }
+}
+
+.container--navigation-menu__row {
+  opacity: 0;
+  @include mixins.desktop {
+    position: absolute;
+    top: 14px;
+    right: 30px;
+    opacity: 1;
+    ul {
+      @include mixins.flex(row, right, 40px);
+      list-style: none;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      color: v.$secondarycolor;
+      font-size: 0.9rem;
+      a {
+        all: unset;
+      }
+    }
+    nav ul li:hover {
+      border-bottom: 1px solid v.$secondarycolor;
+      cursor: pointer;
+    }
+  }
+}
+
+.container--introduction-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -52%);
+  width: 80%;
+  .container--introduction-text__small {
+    color: v.$secondarycolor;
+    text-align: center;
+    @include mixins.flex(column, center, 55px);
+    h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+    p {
+      font-size: 1.6rem;
+      margin: 0;
+    }
+    @include mixins.desktop {
+      gap: 35px;
+      h1 {
+        font-size: 1.4rem;
+        margin: 0;
+      }
+      p {
+        font-size: 1.2rem;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.container--about-pages {
+  padding-top: 15px;
+  padding-left: 70px;
+  padding-right: 70px;
+  position: relative;
+}
+
+.container--about-page__titel {
+  width: 100%;
+  height: 10%;
+  font-size: 2rem;
+  margin-bottom: 50px;
+  @include mixins.flex(column, center, 10px);
+  @include mixins.desktop {
+    font-size: 1.4rem;
+  }
+}
+
+.container--team-info__group {
+  @include mixins.flex(column, center, 40px);
+
+  @include mixins.desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+.container--team-info__rakib {
+  @include mixins.flex(column, center, 20px);
+  .container--image__rakib {
+    @include mixins.personal-image(
+      url(/given-design-ElsaEriksson/assets/profiles/Rakib_Square.png)
+    );
+    @include mixins.desktop {
+      width: 300px;
+      height: 300px;
+    }
+  }
+  .container--gray-area__rakib {
+    @include mixins.gray-area;
+    @include mixins.flex(column, center, 0px);
+    @include mixins.desktop {
+      width: 70%;
+      height: 100px;
+    }
+    .description__rakib {
+      padding: 40px;
+    }
+  }
+  .name__rakib {
+    font-size: 1rem;
+    margin: 0;
+    @include mixins.desktop {
+      font-size: 0.8rem;
+    }
+  }
+  @include mixins.desktop {
+    font-size: 0.8rem;
+  }
+}
+
+.container--team-info__alexandra {
+  @include mixins.flex(column, center, 20px);
+  .container--image__alexandra {
+    @include mixins.personal-image(
+      url(/given-design-ElsaEriksson/assets/profiles/Alexandra_Square.png)
+    );
+    @include mixins.desktop {
+      width: 300px;
+      height: 300px;
+    }
+  }
+  .container--gray-area__alexandra {
+    @include mixins.gray-area;
+    @include mixins.flex(column, center, 0px);
+    @include mixins.desktop {
+      width: 70%;
+      height: 100px;
+    }
+    .description__alexandra {
+      padding: 40px;
+    }
+  }
+  .name__alexandra {
+    font-size: 1rem;
+    margin: 0;
+    @include mixins.desktop {
+      font-size: 0.8rem;
+    }
+  }
+  @include mixins.desktop {
+    font-size: 0.8rem;
+  }
+}
+
+.container--team-info__lasse {
+  @include mixins.flex(column, center, 20px);
+  .container--image__lasse {
+    @include mixins.personal-image(
+      url(/given-design-ElsaEriksson/assets/profiles/NoPerson_Square.png)
+    );
+    @include mixins.desktop {
+      width: 300px;
+      height: 300px;
+    }
+  }
+  .container--gray-area__lasse {
+    @include mixins.gray-area;
+    @include mixins.flex(column, center, 0px);
+    @include mixins.desktop {
+      width: 70%;
+      height: 100px;
+    }
+    .description__lasse {
+      padding: 40px;
+      @include mixins.desktop {
+        padding-left: 0px;
+      }
+    }
+  }
+  .name__lasse {
+    font-size: 1rem;
+    margin: 0;
+    @include mixins.desktop {
+      font-size: 0.8rem;
+    }
+  }
+  @include mixins.desktop {
+    font-size: 0.8rem;
+  }
+}
+
+.container--team-info__sebastian {
+  @include mixins.flex(column, center, 20px);
+  .container--image__sebastian {
+    @include mixins.personal-image(
+      url(/given-design-ElsaEriksson/assets/profiles/Sebastian_Square.png)
+    );
+    @include mixins.desktop {
+      width: 300px;
+      height: 300px;
+    }
+  }
+  .container--gray-area__sebastian {
+    @include mixins.gray-area;
+    @include mixins.flex(column, center, 0px);
+    @include mixins.desktop {
+      width: 70%;
+      height: 100px;
+    }
+    .description__sebastian {
+      padding: 40px;
+    }
+  }
+  .name__sebastian {
+    font-size: 1rem;
+    margin: 0;
+    @include mixins.desktop {
+      font-size: 0.8rem;
+    }
+  }
+  @include mixins.desktop {
+    font-size: 0.8rem;
+  }
+}
+
+.container--arrow__black {
+  @include mixins.flex(column, center, 0px);
+}
+
+.container--contact-information {
+  @include mixins.flex(column, left, 0px);
+  background-color: v.$primarycolor;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-bottom: 5%;
+  padding-top: 5%;
+  align-items: flex-start;
+  .container--adress {
+    @include mixins.footer;
+  }
+  .container--contactways {
+    @include mixins.footer;
+  }
+  .container--social-media {
+    @include mixins.footer;
+  }
+  @include mixins.desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: first baseline;
+    gap: 20%;
+    padding-left: 11%;
+    p {
+      font-size: 1.2rem;
+    }
+  }
+}

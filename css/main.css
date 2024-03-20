@@ -1,0 +1,695 @@
+.container--background-image {
+  height: 100vh;
+  background-image: url("../assets/hero.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.container--navigation-menu__closed {
+  width: 100%;
+  height: 6%;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  gap: 0px;
+}
+.container--navigation-menu__closed .container--menubars {
+  width: 50px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+@media screen and (min-width: 1024px) {
+  .container--navigation-menu__closed .container--menubars {
+    display: none;
+  }
+}
+
+.container--navigation-menu__open {
+  width: 100%;
+  height: 11%;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
+.container--navigation-menu__open ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-size: 1.5rem;
+}
+.container--navigation-menu__open ul a {
+  all: unset;
+}
+@media screen and (min-width: 1024px) {
+  .container--navigation-menu__open {
+    display: none;
+  }
+}
+
+.container--navigation-menu__row {
+  opacity: 0;
+}
+@media screen and (min-width: 1024px) {
+  .container--navigation-menu__row {
+    position: absolute;
+    top: 14px;
+    right: 30px;
+    opacity: 1;
+  }
+  .container--navigation-menu__row ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-size: 0.9rem;
+  }
+  .container--navigation-menu__row ul a {
+    all: unset;
+  }
+  .container--navigation-menu__row nav ul li:hover {
+    border-bottom: 1px solid white;
+    cursor: pointer;
+  }
+}
+
+.container--introduction-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -52%);
+  width: 80%;
+}
+.container--introduction-text .container--introduction-text__small {
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 55px;
+}
+.container--introduction-text .container--introduction-text__small h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+.container--introduction-text .container--introduction-text__small p {
+  font-size: 1.6rem;
+  margin: 0;
+}
+@media screen and (min-width: 1024px) {
+  .container--introduction-text .container--introduction-text__small {
+    gap: 35px;
+  }
+  .container--introduction-text .container--introduction-text__small h1 {
+    font-size: 1.4rem;
+    margin: 0;
+  }
+  .container--introduction-text .container--introduction-text__small p {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+}
+
+.container--about-pages {
+  padding-top: 15px;
+  padding-left: 70px;
+  padding-right: 70px;
+  position: relative;
+}
+
+.container--about-page__titel {
+  width: 100%;
+  height: 10%;
+  font-size: 2rem;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+@media screen and (min-width: 1024px) {
+  .container--about-page__titel {
+    font-size: 1.4rem;
+  }
+}
+
+.container--team-info__group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+@media screen and (min-width: 1024px) {
+  .container--team-info__group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+.container--team-info__rakib {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.container--team-info__rakib .container--image__rakib {
+  width: 250px;
+  height: 250px;
+  background-image: url(/given-design-ElsaEriksson/assets/profiles/Rakib_Square.png);
+  border-radius: 50%;
+  box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.3);
+  background-size: cover;
+  background-position: center;
+}
+@media screen and (min-width: 1024px) {
+  .container--team-info__rakib .container--image__rakib {
+    width: 300px;
+    height: 300px;
+  }
+}
+.container--team-info__rakib .container--gray-area__rakib {
+  height: 130px;
+  width: 300px;
+  background-color: #d4d4d4;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
+@media screen and (min-width: 1024px) {
+  .container--team-info__rakib .container--gray-area__rakib {
+    width: 70%;
+    height: 100px;
+  }
+}
+.container--team-info__rakib .container--gray-area__rakib .description__rakib {
+  padding: 40px;
+}
+.container--team-info__rakib .name__rakib {
+  font-size: 1rem;
+  margin: 0;
+}
+@media screen and (min-width: 1024px) {
+  .container--team-info__rakib .name__rakib {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container--team-info__rakib {
+    font-size: 0.8rem;
+  }
+}
+
+.container--team-info__alexandra {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.container--team-info__alexandra .container--image__alexandra {
+  width: 250px;
+  height: 250px;
+  background-image: url(/given-design-ElsaEriksson/assets/profiles/Alexandra_Square.png);
+  border-radius: 50%;
+  box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.3);
+  background-size: cover;
+  background-position: center;
+}
+@media screen and (min-width: 1024px) {
+  .container--team-info__alexandra .container--image__alexandra {
+    width: 300px;
+    height: 300px;
+  }
+}
+.container--team-info__alexandra .container--gray-area__alexandra {
+  height: 130px;
+  width: 300px;
+  background-color: #d4d4d4;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
+@media screen and (min-width: 1024px) {
+  .container--team-info__alexandra .container--gray-area__alexandra {
+    width: 70%;
+    height: 100px;
+  }
+}
+.container--team-info__alexandra .container--gray-area__alexandra .description__alexandra {
+  padding: 40px;
+}
+.container--team-info__alexandra .name__alexandra {
+  font-size: 1rem;
+  margin: 0;
+}
+@media screen and (min-width: 1024px) {
+  .container--team-info__alexandra .name__alexandra {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container--team-info__alexandra {
+    font-size: 0.8rem;
+  }
+}
+
+.container--team-info__lasse {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.container--team-info__lasse .container--image__lasse {
+  width: 250px;
+  height: 250px;
+  background-image: url(/given-design-ElsaEriksson/assets/profiles/NoPerson_Square.png);
+  border-radius: 50%;
+  box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.3);
+  background-size: cover;
+  background-position: center;
+}
+@media screen and (min-width: 1024px) {
+  .container--team-info__lasse .container--image__lasse {
+    width: 300px;
+    height: 300px;
+  }
+}
+.container--team-info__lasse .container--gray-area__lasse {
+  height: 130px;
+  width: 300px;
+  background-color: #d4d4d4;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
+@media screen and (min-width: 1024px) {
+  .container--team-info__lasse .container--gray-area__lasse {
+    width: 70%;
+    height: 100px;
+  }
+}
+.container--team-info__lasse .container--gray-area__lasse .description__lasse {
+  padding: 40px;
+}
+@media screen and (min-width: 1024px) {
+  .container--team-info__lasse .container--gray-area__lasse .description__lasse {
+    padding-left: 0px;
+  }
+}
+.container--team-info__lasse .name__lasse {
+  font-size: 1rem;
+  margin: 0;
+}
+@media screen and (min-width: 1024px) {
+  .container--team-info__lasse .name__lasse {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container--team-info__lasse {
+    font-size: 0.8rem;
+  }
+}
+
+.container--team-info__sebastian {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.container--team-info__sebastian .container--image__sebastian {
+  width: 250px;
+  height: 250px;
+  background-image: url(/given-design-ElsaEriksson/assets/profiles/Sebastian_Square.png);
+  border-radius: 50%;
+  box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.3);
+  background-size: cover;
+  background-position: center;
+}
+@media screen and (min-width: 1024px) {
+  .container--team-info__sebastian .container--image__sebastian {
+    width: 300px;
+    height: 300px;
+  }
+}
+.container--team-info__sebastian .container--gray-area__sebastian {
+  height: 130px;
+  width: 300px;
+  background-color: #d4d4d4;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
+@media screen and (min-width: 1024px) {
+  .container--team-info__sebastian .container--gray-area__sebastian {
+    width: 70%;
+    height: 100px;
+  }
+}
+.container--team-info__sebastian .container--gray-area__sebastian .description__sebastian {
+  padding: 40px;
+}
+.container--team-info__sebastian .name__sebastian {
+  font-size: 1rem;
+  margin: 0;
+}
+@media screen and (min-width: 1024px) {
+  .container--team-info__sebastian .name__sebastian {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container--team-info__sebastian {
+    font-size: 0.8rem;
+  }
+}
+
+.container--arrow__black {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
+
+.container--contact-information {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  gap: 0px;
+  background-color: black;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-bottom: 5%;
+  padding-top: 5%;
+  align-items: flex-start;
+}
+.container--contact-information .container--adress {
+  color: white;
+  background-color: black;
+  font-size: 1.4rem;
+}
+.container--contact-information .container--contactways {
+  color: white;
+  background-color: black;
+  font-size: 1.4rem;
+}
+.container--contact-information .container--social-media {
+  color: white;
+  background-color: black;
+  font-size: 1.4rem;
+}
+@media screen and (min-width: 1024px) {
+  .container--contact-information {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: first baseline;
+    gap: 20%;
+    padding-left: 11%;
+  }
+  .container--contact-information p {
+    font-size: 1.2rem;
+  }
+}
+
+.menubars--horizontal-line {
+  border-top: 5px solid white;
+  width: 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  padding: 0%;
+}
+
+.icon--arrow__white {
+  height: 36px;
+  width: 36px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 93%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
+.icon--arrow__white .arrow__white i {
+  font-size: 1.4rem;
+  color: black;
+}
+
+.icon--arrow__black {
+  height: 36px;
+  width: 36px;
+  background-color: black;
+  border-radius: 50%;
+  margin-top: 20px;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
+.icon--arrow__black .arrow__black {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
+.icon--arrow__black .arrow__black i {
+  font-size: 1.4rem;
+}
+
+.container--social-media i {
+  margin-right: 15px;
+}
+
+.description__sebastian i, .description__rakib i, .description__alexandra i, .description__lasse i {
+  font-size: 2.5rem;
+  margin-right: 10px;
+}
+
+@keyframes rotate-bottom {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-90deg) translate(10px);
+  }
+  100% {
+    transform: rotate(-135deg) translate(7.5px, 7.5px);
+  }
+}
+@keyframes rotate-top {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(90deg) translate(10px);
+  }
+  100% {
+    transform: rotate(135deg) translate(6.5px, -6px);
+  }
+}
+@keyframes disappear {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#bottom {
+  animation: rotate-bottom 0.4s forwards;
+}
+
+#top {
+  animation: rotate-top 0.4s forwards;
+}
+
+#middle {
+  animation: disappear 0.4s forwards;
+}
+
+.container--navigation-menu__open {
+  animation: appear 0.4s forwards;
+}
+
+@keyframes rotate-bottom__closed {
+  0% {
+    transform: rotate(-135deg) translate(7.5px, 7.5px);
+  }
+  50% {
+    transform: rotate(-90deg) translate(10px);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes rotate-top__closed {
+  0% {
+    transform: rotate(135deg) translate(6.5px, -6px);
+  }
+  50% {
+    transform: rotate(90deg) translate(10px);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes disappear__closed {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes appear__closed {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+#bottom {
+  animation: rotate-bottom__closed 0.4s forwards;
+}
+
+#top {
+  animation: rotate-top__closed 0.4s forwards;
+}
+
+#middle {
+  animation: disappear__closed 0.4s forwards;
+}
+
+.container--navigation-menu__open {
+  animation: appear__closed 0.4s forwards;
+}
+
+a .menubars--horizontal-line {
+  border-top: 5px solid white;
+  width: 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  padding: 0%;
+}
+
+#middle:target .container--navigation-menu__open {
+  animation: appear 0.4s forwards;
+}
+
+#middle:target #top {
+  animation: rotate-top 0.4s forwards;
+}
+
+#middle:target #bottom {
+  animation: rotate-bottom 0.4s forwards;
+}
+
+#middle:target #middle {
+  animation: disappear 0.4s forwards;
+}
+
+#top:target .container--navigation-menu__open {
+  animation: appear__closed 0.4s forwards;
+}
+
+#top:target #top {
+  animation: rotate-top__closed 0.4s forwards;
+}
+
+#top:target #bottom {
+  animation: rotate-bottom__closed 0.4s forwards;
+}
+
+#top:target #middle {
+  animation: disappear__closed 0.4s forwards;
+}
+
+#bottom:target .container--navigation-menu__open {
+  animation: appear__closed 0.4s forwards;
+}
+
+#bottom:target #top {
+  animation: rotate-top__closed 0.4s forwards;
+}
+
+#bottom:target #bottom {
+  animation: rotate-bottom__closed 0.4s forwards;
+}
+
+#bottom:target #middle {
+  animation: disappear__closed 0.4s forwards;
+}
+
+body, html {
+  margin: 0;
+  height: 100%;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 12pt;
+  scroll-behavior: smooth;
+}
+
+/*# sourceMappingURL=main.css.map */

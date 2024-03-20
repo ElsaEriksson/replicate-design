@@ -1,0 +1,121 @@
+@use "mixins";
+
+
+@keyframes rotate-bottom {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-90deg) translate(10px);
+    }
+    100% {
+        transform: rotate(-135deg) translate(7.5px, 7.5px);
+    }
+}
+
+@keyframes rotate-top {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(90deg) translate(10px);
+    }
+    100% {
+        transform: rotate(135deg) translate(6.5px, -6px);
+    }
+}
+
+@keyframes disappear {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+#bottom{
+    animation: rotate-bottom 0.4s forwards;
+ }
+
+#top {
+    animation: rotate-top 0.4s forwards;
+}
+    
+#middle {
+    animation: disappear 0.4s forwards;
+}
+
+.container--navigation-menu__open {
+    animation: appear 0.4s forwards;
+}
+
+
+@keyframes rotate-bottom__closed {
+    0% {
+        transform: rotate(-135deg) translate(7.5px, 7.5px);
+    }
+    50% {
+        transform: rotate(-90deg) translate(10px);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes rotate-top__closed {
+    0% {
+        transform: rotate(135deg) translate(6.5px, -6px);
+    }
+    50% {
+        transform: rotate(90deg) translate(10px);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes disappear__closed {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes appear__closed {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
+#bottom{
+    animation: rotate-bottom__closed 0.4s forwards;
+ }
+
+#top {
+    animation: rotate-top__closed 0.4s forwards;
+}
+    
+#middle {
+    animation: disappear__closed 0.4s forwards;
+}
+
+.container--navigation-menu__open {
+    animation: appear__closed 0.4s forwards;
+}

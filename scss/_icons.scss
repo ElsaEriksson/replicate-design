@@ -1,0 +1,56 @@
+@use "mixins";
+@use "variables" as v;
+
+.menubars--horizontal-line {
+    @include mixins.horizontal-line;
+}
+
+.icon--arrow__white {
+    height: 36px;
+    width: 36px;
+    background-color: v.$secondarycolor;
+    border-radius: 50%;
+    position: absolute;
+    top: 93%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include mixins.flex (column,center, 0px);
+    .arrow__white {
+        i  {
+            font-size: 1.4rem;
+            color: v.$primarycolor;
+        }
+    }
+}
+
+.icon--arrow__black {
+    height: 36px;
+    width: 36px;
+    background-color: v.$primarycolor;
+    border-radius: 50%;
+    margin-top: 20px;
+    left: 50%;
+    @include mixins.flex (column,center, 0px);
+    .arrow__black {
+        @include mixins.flex (column,center, 0px);
+        i  {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.container--social-media i {
+    margin-right: 15px;
+}
+
+.description__sebastian, .description__rakib, .description__alexandra, .description__lasse {
+    i {
+        font-size: 2.5rem;
+        margin-right: 10px;
+    }
+}
+
+
+
+
+

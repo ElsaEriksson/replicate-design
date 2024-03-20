@@ -1,0 +1,61 @@
+@use "mixins";
+
+
+a .menubars--horizontal-line {
+    @include mixins.horizontal-line;
+}
+
+
+#middle:target .container--navigation-menu__open {
+    animation: appear 0.4s forwards;
+}
+
+#middle:target #top {
+    animation: rotate-top 0.4s forwards;
+}
+
+#middle:target #bottom {
+    animation: rotate-bottom 0.4s forwards;
+}
+
+#middle:target #middle {
+    animation: disappear 0.4s forwards;
+}
+
+
+#top:target .container--navigation-menu__open {
+    animation: appear__closed 0.4s forwards;
+}
+
+#top:target #top {
+    animation: rotate-top__closed 0.4s forwards;
+}
+
+#top:target #bottom {
+    animation: rotate-bottom__closed 0.4s forwards;
+}
+
+#top:target #middle {
+    animation: disappear__closed 0.4s forwards;
+}
+
+
+#bottom:target .container--navigation-menu__open {
+    animation: appear__closed 0.4s forwards;
+}
+
+#bottom:target #top {
+    animation: rotate-top__closed 0.4s forwards;
+}
+
+#bottom:target #bottom {
+    animation: rotate-bottom__closed 0.4s forwards;
+}
+
+#bottom:target #middle {
+    animation: disappear__closed 0.4s forwards;
+}
+
+
+
+
